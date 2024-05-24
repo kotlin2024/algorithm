@@ -6,23 +6,23 @@ class Solution {
     babblings.forEach {
         var bab = it
 
-        if (!it.checkingDuplicatedwords(canSay)) {
+        if (!it.checkingDuplicatedWords(canSay)) {
             canSay.forEach { canSpeakWord ->
                 bab = bab.replace(canSpeakWord, "★")
             }
 
-            if (bab.replace("★", "").isEmpty()) answer++
+            if (bab.all{it.toString()=="★"}) answer++
         }
     }
 
     return answer
 }
 
-fun String.checkingDuplicatedwords(words: List<String>): Boolean {
+fun String.checkingDuplicatedWords(words: List<String>): Boolean {
     words.forEach {
         keyword ->
         if (this.contains(keyword + keyword)) return true
-        
+
     }
 
     return false

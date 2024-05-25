@@ -1,3 +1,4 @@
+
 class Solution {
     fun solution(babblings: Array<String>): Int {
     val canSay = listOf("aya", "ye", "woo", "ma")
